@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница профиля</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        .thank-you-message {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 250px;
+            background-color: white;
+            border: 2px solid #000;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background-square">
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Профиль" class="profile-image">
+                </div>
+                <div class="profile-info">
+                    <h1>Корней<br>Кирилл</h1>
+                    <p>Занимался 2 года дзюдо<br>Ученик колледжа ВятГУ<br>19 лет, вес 64, рост 182см, размер ноги 42, размер одежды М, размер IQ 200</p>
+                </div>
+            </div>
+
+            <div class="car-section">
+                <h2>Подарите кто-нибудь</h2>
+                <div class="car-details">
+                    <div class="car1-background">
+                        <img src="{{ url_for('static', filename='car1.jpg') }}" alt="Автомобиль 1" class="car-image">
+                    </div>
+                    <img src="{{ url_for('static', filename='palka.jpg') }}" alt="Палка" class="separator-image">
+                    <div class="car2-container">
+                        <p>M5 F90<br><br>Мощность: 600 HP<br>Двигатель: 4.4 L<br>Скорость: 350 km/h<br>Вес: 1895 KG</p>
+                        <img src="{{ url_for('static', filename='foncar1.jpg') }}" alt="Фон для автомобиля 1" class="foncar1-image">
+                        </div>
+                </div>
+                <div class="car2-details">
+                    <div class="car2-background">
+                        <img src="{{ url_for('static', filename='car2.jpg') }}" alt="Автомобиль 2" class="car2-image">
+                        <div class="xar">
+                            <p>M5 F90<br>Мощность: 600 HP<br>Двигатель: 4.4 L<br>Скорость: 350 km/h<br>Вес: 1895 KG</p>
+                            <img src="{{ url_for('static', filename='foncar2.jpg') }}" alt="Фон для автомобиля 2" class="foncar2-image">
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <form id="contact-form" method="POST" action="/submit-email">
+                    <div class="label-container">
+                        <label for="email">Напишите свою почту для связи:</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+
+            <footer>
+                <p>Быть воином жить вечно</p>
+            </footer>
+        </div>
+    </div>
+
+    <div id="thank-you-message" class="thank-you-message">
+        <p id="thank-you-text"></p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

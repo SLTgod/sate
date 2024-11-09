@@ -1,0 +1,391 @@
+body {
+    font-family: Radiotechnika, sans-serif;
+    src: url('{{ url_for('static', filename='fonts/Radiotechnika.ttf') }}') format('truetype');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    background-image: url("/static/background.jpg"); /* Укажите путь напрямую */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 90px; /* Отступ сверху для всех элементов */
+}
+.
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.background-square {
+    background-color: rgba(245, 245, 245, 0.8); /* Белый фон */
+    border-radius: 50px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    width: 90%; /* Ширина квадрата */
+    max-width: 800px; /* Максимальная ширина */
+    border: 5px solid #B4FFED; /* Цвет границы */
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+
+}
+.profile-image-container {
+    position: relative; /* Относительное позиционирование для наложения текста */
+}
+
+.xar {
+font-size: 0px;
+}
+
+.profile-image {
+    width: 200px; /* Ширина изображения */
+    height: 200px; /* Высота, чтобы сделать его квадратным */
+    border-radius: 40px; /* Скругляем углы  */
+    object-fit: cover; /* Обеспечивает, чтобы изображение не искажалось при подгонке под квадрат */
+    border: 5px solid #B4FFED; /* Добавляем рамку, опционально */
+    margin-right: 10px;
+}
+
+.profile-info h1 {
+    position: relative; /* Для управления позиционированием */
+    background-image: url("/static/brus.jpg"); /* Указываем путь к картинке */
+    background-size: 400px; /* Картинка растягивается по размеру блока */
+    background-position: right; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    padding: 20px; /* Добавляем отступы, чтобы текст не прилегал к краям */
+    z-index: 1; /* Текст на переднем плане */
+    color: black; /* Меняем цвет текста, чтобы он был виден на фоне */
+    text-align: center;
+    font-size: 30px; /* Сделать текст меньшего размера */
+    left: -25%; /* Центрирование по горизонтали */
+}
+
+.profile-info p {
+font-size: 18px
+
+}
+
+.car-section {
+    margin-top: 20px;
+}
+
+.car-details {
+    display: flex;
+    justify-items: ;
+    align-items: 300px;
+    margin-top: 30px;
+}
+
+.car1-background {
+    position: relative; /* Для позиционирования дочерних элементов */
+    width: 350px; /* Установите ширину по вашему усмотрению */
+    height: 200px; /* Установите высоту по вашему усмотрению */
+    background-image: url("/static/foncar1.jpg"); /* Путь к фоновому изображению */
+    background-size: cover; /* Обрезает фон по размеру элемента */
+    background-position: center; /* Центрирует изображение фона */
+    border-radius: 10px; /* Скругленные углы фона */
+}
+
+.car2-background {
+position: relative; /* Для позиционирования дочерних элементов */
+    width: 450px; /* Установите ширину по вашему усмотрению */
+    height: 200px; /* Установите высоту по вашему усмотрению */
+    background-image: url("/static/foncar2.jpg"); /* Путь к фоновому изображению */
+    background-size: cover; /* Обрезает фон по размеру элемента */
+    background-position: center; /* Центрирует изображение фона */
+    border-radius: 10px; /* Скругленные углы фона */
+    margin: -50px 300px; /* Добавляет отступ сверху и снизу */
+}
+
+.car-image {
+    width: 350px;
+    margin-right: 1px;
+}
+
+.car2-image {
+    width: 520px;
+    margin-right: 100px;
+    margin: 0px -30px; /* Добавляет отступ сверху и снизу */
+}
+
+.car-section h2 {
+    text-align: center; /* Центрирование текста */
+}
+
+.separator-image {
+    width: 5px; /* Ширина изображения палки */
+    height: 100px;/* Автоматическая высота */
+    display: block;
+    margin: 10px 5px; /* Центрирование изображения и отступы сверху и снизу */
+}
+
+
+.form-section {
+    display: flex; /* Использует flexbox для выравнивания элементов */
+    align-items: center; /* Выравнивает элементы по центру вертикально */
+    margin-top: 120px; /* Отступ сверху */
+    flex-direction: column; /* Устанавливает направление колонкой */
+}
+
+
+.label-container {
+    margin-bottom: 10px; /* Отступ снизу для текста */
+    font-weight: bold;
+}
+.input-container {
+    display: flex;
+    width: 700px
+}
+
+.button-container {
+    transform: translateY(-41px) translateX(590px);
+}
+
+input[type="email"] {
+    border-radius: 10px; /* Закругляет края поля ввода */
+    padding: 10px; /* Отступ внутри поля ввода */
+    border: 1px solid #B4FFED; /* Цвет границы */
+    flex: 1; /* Позволяет полю ввода занимать доступное пространство */
+    margin-right: 10px; /* Отступ справа от поля ввода */
+    height: 20px; /* Задает фиксированную высоту поля ввода */
+    width: 100%; /* Ширина поля ввода */
+    max-width: 550px; /* Максимальная ширина для поля ввода */
+
+}
+
+@font-face {
+    font-family: 'Radiotechnika';
+    src: url('/static/fonts/Radiotechnika.ttf') format('truetype');
+}
+
+button {
+    font-family: 'Radiotechnika', sans-serif; /* Применяем шрифт к кнопке */
+    border-radius: 10px; /* Закругляет края кнопки */
+    padding: 10px 15px; /* Отступ внутри кнопки */
+    background-color: #B4FFED; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убирает границу */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении */
+    height: 40px; /* Задает фиксированную высоту поля ввода */
+}
+
+button:hover {
+    background-color: #000000; /* Цвет кнопки при наведении */
+    color: white; /* Цвет текста кнопки */
+}
+
+footer {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 20px;
+    color: #000000;
+    font-weight: bold;
+}
+
+.foncar1-image {
+    position: absolute; /* Позволяет позиционировать элемент относительно родительского контейнера */
+    top: 0; /* Позиционируем по верхнему краю родительского контейнера */
+    left: 0; /* Позиционируем по левому краю родительского контейнера */
+    width: 0%; /* Ширина должна соответствовать ширине контейнера */
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    z-index: 1; /* Уровень слоя, ниже чем у car1 */
+    transform: translateY(-41px) translateX(590px);
+}
+
+.foncar2-image {
+    position: absolute; /* Позволяет позиционировать элемент относительно родительского контейнера */
+    top: 0; /* Позиционируем по верхнему краю родительского контейнера */
+    left: 0; /* Позиционируем по левому краю родительского контейнера */
+    width: 0%; /* Ширина должна соответствовать ширине контейнера */
+    height: 200px;
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    z-index: 1; /* Уровень слоя, ниже чем у car1 */
+    transform: translateY(650px) translateX(-10px);
+    }
+
+@media (max-width: 600px) {
+
+    .profile-image {
+    width: 250px; /* Ширина изображения */
+    height: 250px; /* Высота, чтобы сделать его квадратным */
+    border-radius: 40px; /* Скругляем углы  */
+    object-fit: cover; /* Обеспечивает, чтобы изображение не искажалось при подгонке под квадрат */
+    border: 5px solid #B4FFED; /* Добавляем рамку, опционально */
+    top: 150%; /* Центрирование по вертикали */
+    left: 50%; /* Центрирование по горизонтали */
+    }
+
+    .profile-info h1 {
+    position: relative; /* Для управления позиционированием */
+    background-image: url("/static/brus.jpg"); /* Указываем путь к картинке */
+    background-size: 400px; /* Картинка растягивается по размеру блока */
+    background-position: right; /* Центрирование фона */
+    background-repeat: no-repeat; /* Отключаем повторение изображения */
+    padding: 20px; /* Добавляем отступы, чтобы текст не прилегал к краям */
+    z-index: 1; /* Текст на переднем плане */
+    color: black; /* Меняем цвет текста, чтобы он был виден на фоне */
+    text-align: center;
+    font-size: 30px; /* Сделать текст меньшего размера */
+    left: -10%; /* Центрирование по горизонтали */
+    }
+
+    .background-square {
+    background-color: rgba(245, 245, 245, 0.8); /* Белый фон */
+    border-radius: 20px; /* Закругленные углы */
+    padding: 20px; /* Внутренние отступы */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Тень для глубины */
+    width: 90%; /* Ширина квадрата */
+    max-width: 760px; /* Максимальная ширина */
+    border: 5px solid #B4FFED; /* Цвет границы */
+    box-sizing: border-box; /* Включаем padding и border в расчет ширины */
+    margin-left: 410px; /* Добавляем отступ слева для смещения на 200 пикселей */
+    height: 1650px; /* Высота квадрата 500 пикселей */
+    }
+
+    body {
+    font-family: Radiotechnika, sans-serif;
+    src: url('{{ url_for('static', filename='fonts/Radiotechnika.ttf') }}') format('truetype');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("/static/background.jpg"); /* Укажите путь напрямую */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 440px; /* Отступ сверху для всех элементов */
+    overflow-x: hidden;
+    }
+
+    .profile-info {
+    font-size: 25px; /* Сделать текст меньшего размера */
+    }
+
+    .car-section {
+    margin-top: 40px;
+    font-size: 25px; /* Сделать текст меньшего размера */
+    }
+
+    .car-image {
+    position: relative; /* Установите позиционирование */
+    z-index: 2;
+    width: 700px;
+    margin-right: 1px;
+    }
+
+    .foncar1-image {
+    position: absolute; /* Позволяет позиционировать элемент относительно родительского контейнера */
+    top: 0; /* Позиционируем по верхнему краю родительского контейнера */
+    left: 0; /* Позиционируем по левому краю родительского контейнера */
+    width: 200%; /* Ширина должна соответствовать ширине контейнера */
+    height: 200px;
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    z-index: 1; /* Уровень слоя, ниже чем у car1 */
+    transform: translateY(450px) translateX(-10px);
+    }
+
+    .car1-background {
+    position: relative; /* Для позиционирования дочерних элементов */
+    width: 0px; /* Установите ширину по вашему усмотрению */
+    height: 0px; /* Установите высоту по вашему усмотрению */
+    background-image: url("/static/foncar1.jpg"); /* Путь к фоновому изображению */
+    background-size: cover; /* Обрезает фон по размеру элемента */
+    background-position: center; /* Центрирует изображение фона */
+    border-radius: 10px; /* Скругленные углы фона */
+    }
+
+
+    .car2-image {
+    width: 770px;
+    margin: 300px -320px; /* Добавляет отступ сверху и снизу */
+    position: relative; /* Установите позиционирование */
+    z-index: 2;
+    }
+
+    .car2-background {
+    position: relative; /* Для позиционирования дочерних элементов */
+    width: 450px; /* Установите ширину по вашему усмотрению */
+    height: 200px; /* Установите высоту по вашему усмотрению */
+    background-image: url("/static/foncar2.jpg"); /* Путь к фоновому изображению */
+    background-size: cover; /* Обрезает фон по размеру элемента */
+    background-position: center; /* Центрирует изображение фона */
+    border-radius: 100px; /* Скругленные углы фона */
+    margin: -50px 300px; /* Добавляет отступ сверху и снизу */
+    }
+
+    .foncar2-image {
+    position: absolute; /* Позволяет позиционировать элемент относительно родительского контейнера */
+    top: 0; /* Позиционируем по верхнему краю родительского контейнера */
+    left: 0; /* Позиционируем по левому краю родительского контейнера */
+    width: 150%; /* Ширина должна соответствовать ширине контейнера */
+    height: 200px;
+    height: auto; /* Автоматическая высота, чтобы сохранить пропорции */
+    z-index: 1; /* Уровень слоя, ниже чем у car1 */
+    transform: translateY(-380px) translateX(-30px);
+    }
+
+    .form-section {
+    display: flex; /* Использует flexbox для выравнивания элементов */
+    align-items: center; /* Выравнивает элементы по центру вертикально */
+    margin-top: 750px; /* Отступ сверху */
+    flex-direction: column; /* Устанавливает направление колонкой */
+    }
+
+    .car2-container {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    margin-top: 20px;
+    font-size: 0px;
+    }
+
+    .xar {
+    display: flex;
+    flex-direction: column; /* Размещаем элементы вертикально */
+    align-items: center; /* Центрируем элементы по горизонтали */
+    margin-top: -350px;
+    transform: translateX(-250px);
+    font-size: 30px;
+    }
+
+    .separator-image {
+    width: 10px; /* Ширина изображения палки */
+    height: 180px;/* Автоматическая высота */
+    display: block;
+    margin: 10px 5px; /* Центрирование изображения и отступы сверху и снизу */
+    transform: translateY(835px) translateX(15px);
+    }
+
+    button {
+    font-family: 'Radiotechnika', sans-serif; /* Применяем шрифт к кнопке */
+    border-radius: 10px; /* Закругляет края кнопки */
+
+    background-color: #B4FFED; /* Цвет фона кнопки */
+    color: black; /* Цвет текста кнопки */
+    border: none; /* Убирает границу */
+    cursor: pointer; /* Изменяет курсор на указатель при наведении */
+    height: 40px; /* Задает фиксированную высоту поля ввода */
+    transform: translateY(-41px) translateX(590px);
+    }
+
+    footer {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    }
+
+    .button-container {
+    transform: translateY(1px) translateX(-10px);
+    }
+}

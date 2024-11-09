@@ -1,0 +1,12 @@
+// Динамически изменяем текст сообщения
+        var message = 'Спасибо за отправку! Мы свяжемся с тобой по почте ';
+        document.getElementById('thank-you-text').textContent = message;
+
+        // Показываем белый квадрат
+        var thankYouMessage = document.getElementById('thank-you-message');
+        thankYouMessage.style.display = 'block';
+
+        // Скрыть через 5 секунд
+        setTimeout(function() {
+            thankYouMessage.style.display = 'none';
+        }, 10000); // Через 5 секунд скрыть сообщение
